@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Pawnshop Pal</title>
+  <script>
+    // Sends phones straight to their app store. iPads on iPadOS 13 and later report themselves as Macs, so a Mac
+    // with a touch screen is treated as an iPad.
+    (function () {
+      var appStoreUrl = 'https://apps.apple.com/us/app/pawnshop-pal/id6766632910';
+      var playStoreUrl = 'https://play.google.com/store/apps/details?id=com.apex_pawn.pawnshop_pal';
+      var userAgent = navigator.userAgent;
+      var isIos = /iPhone|iPad|iPod/.test(userAgent) ||
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      if (isIos) {
+        window.location.replace(appStoreUrl);
+      } else if (/Android/i.test(userAgent)) {
+        window.location.replace(playStoreUrl);
+      }
+    })();
+  </script>
+</head>
+
+<body>
+  <h1>Get Pawnshop Pal</h1>
+  <p>Pawnshop Pal shows you your loans and due dates at pawn shops that use Apex Pawn. Download it for your phone:</p>
+  <ul>
+    <li><a href="https://apps.apple.com/us/app/pawnshop-pal/id6766632910">Download on the App Store</a> (iPhone and
+      iPad)</li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.apex_pawn.pawnshop_pal">Get it on Google Play</a>
+      (Android)</li>
+  </ul>
+  <p>See Our <a href="../">Privacy Policy</a> and <a href="../terms/">Terms of Service</a>.</p>
+</body>
+
+</html>
